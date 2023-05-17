@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card mt-0 text-center" >
+      <div class="card-header">
+      <h1 class="h4">
+        Account Register 
+       </h1>
+      </div>
+      	<img class="mx-auto d-block logo m-4" src="https://image.flaticon.com/icons/png/512/1672/1672225.png"
+        	 alt="Logo" width="100px" height="100px">
+      
+      <div class="card-body">
+        <form #registerForm="ngForm" >
+        
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.name" 
+            placeholder="Username" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.password">
+          </div>
+          <button class="btn btn-info" style="margin: 10px"  
+          (click)="getName(registerForm)" (click)="resetForm(registerForm)">  
+            REGISTER
+          </button>
+        </form>
+      </div>
+    </div> 
+  </div>
+</div>

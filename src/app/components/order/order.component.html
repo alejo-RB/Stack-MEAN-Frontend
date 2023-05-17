@@ -1,0 +1,88 @@
+<!-- ENCABEZADO -->
+<button type="button" class="btn btn-info btn-lg" [routerLink]="['/menu']" style="margin: 10px">
+	<i class="large material-icons">arrow_back</i>
+</button>
+
+<div class="card mb-3">
+	  <font FACE="Comic Sans MS,arial,verdana" color="black" style="text-align:center"><h3 class="card-header">FORMULARIO DE PEDIDOS</h3></font>
+	  
+	
+	  <img src="https://i0.wp.com/revistaindustria.com.mx/wp-content/uploads/2019/02/comida-apps.jpg?fit=800%2C450&ssl=1" 
+	  border="1" width="-10%" height="300">
+</div>
+
+<!-- CUERPO -->
+<div class="row">
+	<!-- FORM -->
+  <div class="col-md-4">
+    <div class="card border-dark ">
+      <div class="card-body p-4">
+
+        <!-- FORM -->
+        <form #orderForm="ngForm" (ngSubmit)="addOrder(orderForm)">
+        
+        <!-- ENCABEZADO DE TARJETA-->
+        <div class="card border-dark mb-3" style="max-width: 70rem;">
+        <div class="card-header bg-primary btn-primary"><FONT FACE="impact" ><h3 align="center">REGISTRO DE DATOS</h3></FONT></div>
+		</div>
+        
+		<!-- THE Id's Employee -->
+          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="orderService.selectedOrder._id">
+          
+          	  <div class="form-group">
+	            <input type="text" name="customerId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.customerId"
+	              placeholder="Enter the Id Customer" class="form-control">
+	          </div>
+          
+	          <div class="form-group">
+	            <input type="text" name="orderId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderId"
+	              placeholder="Enter the Id Order" class="form-control">
+	          </div>
+	
+	          <div class="form-group">
+	            <input type="text" name="orderStatus" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderStatus"
+	              placeholder="Enter Order Status" class="form-control">
+	          </div>
+	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(orderForm)">Clean</button>
+	          <button class="btn btn-success">Save</button>
+	      </form>
+	    </div>
+  </div>
+</div>
+
+<!-- TABLE -->
+	<div class="col-md-8 card border-dark mb-3">
+	<span class="navbar-toggler-icon collapsed"></span>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Id Customer</th>
+					<th scope="col">Id Order</th>
+					<th scope="col">Order Status</th>
+					<th scope="col">Created At</th>
+					<th scope="col">Updated At</th>
+					<th scope="col">Options</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-primary" *ngFor="let order of orderService.orders">
+					<th scope="row">{{order.customerId}}</th>
+				    <td>{{order.orderId}}</td>
+				    <td>{{order.orderStatus}}</td>
+				    <td>{{order.createdAt}}</td>
+				    <td>{{order.updatedAt}}</td>
+				    <td>
+			          <button  class="btn btn-secondary btn-sm" (click)="editOrder(order)">
+			            <i class="material-icons">edit</i>
+			          </button>
+			          <button class="btn btn-danger btn-sm" (click)="deleteOrder(order._id!, orderForm)">
+			            <i class="material-icons">delete</i>
+			          </button>
+				    </td>
+				    
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+

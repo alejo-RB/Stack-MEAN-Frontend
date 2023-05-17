@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid" >
+
+    <a class="navbar-brand">
+    <img 
+		  src="https://images.squarespace-cdn.com/content/v1/56b8dfcf62cd94ec072ddb33/1547134322115-TKQN4NJZILFDO4QZPK1D/Mean+Stack.png" 
+		  class= "card-img-top" width="5px" height="70px">
+      </a>
+      
+      <a class="navbar-brand">RESTAURANT</a>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['home']">HOME
+          <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex">
+      	<button class="btn btn-info my-2 my-sm-0 " type="submit" style="margin-right: 10px" [routerLink]="['/login']" >
+      		LOGIN
+      	</button>
+      	
+        <button class="btn btn-info my-2 my-sm-0 " type="submit" style="margin-left: 10px" [routerLink]="['/register']">
+        	REGISTER
+        </button>
+        
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class= "container main-container" >
+	<router-outlet></router-outlet>
+
+</div>
