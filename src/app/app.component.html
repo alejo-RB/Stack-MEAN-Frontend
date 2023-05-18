@@ -1,5 +1,11 @@
-<body style="background-color:#717478;">
+<body style="background-color: #717478">
 
-<app-navbar></app-navbar>
-
+  <div *ngIf="(router.url == '/home' || router.url === '/register' || router.url === '/login')">
+    <app-navbar></app-navbar>
+  </div>
+  
+  <div class="container main-container">
+    <router-outlet></router-outlet>
+  </div>
+  
 </body>
