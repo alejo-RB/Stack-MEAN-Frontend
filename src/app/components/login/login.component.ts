@@ -15,6 +15,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeColor(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.style.backgroundColor = '#c49b28'; // Cambia el color según tus preferencias
+  }
+
+  resetColor(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.style.backgroundColor = '#FFC72C'; // Restablece el color original
+  }
+
   getComprobacion(form: NgForm){
 	var fo = form.value.name;
 	var foPass= form.value.password;

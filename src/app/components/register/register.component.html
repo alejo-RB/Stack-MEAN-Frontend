@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4 mx-auto">
     <div class="card mt-0 text-center" >
-      <div class="card-header">
+      <div class="card-header" style="background-color: #FFC72C; color: #27251F;">
       <h1 class="h4">
         Account Register 
        </h1>
@@ -12,19 +12,18 @@
       <div class="card-body">
         <form #registerForm="ngForm" >
         
-          <div class="form-group">
+          <div class="form-group" style="margin-top: -10px;">
             <input type="text" class="form-control" name="name" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.name" 
             placeholder="Username" autofocus>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-top: 10px;">
             <input type="email" class="form-control" name="email" placeholder="Email" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.email">
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-top: 10px;">
             <input type="password" class="form-control" name="password" placeholder="Password" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.password">
           </div>
-          <button class="btn btn-info" style="margin: 10px"  
-          (click)="getName(registerForm)" (click)="resetForm(registerForm)">  
-            REGISTER
+          <button class="btn btn-block" type="submit" style="margin-top: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"  (click)="getName(registerForm)" (click)="resetForm(registerForm)" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+            Register
           </button>
         </form>
       </div>

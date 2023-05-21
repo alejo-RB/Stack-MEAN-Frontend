@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4 mx-auto">
     <div class="card mt-0 text-center">
-      <div class="card-header">
+      <div class="card-header d-flex justify-content-center " style="background-color: #FFC72C; color: #27251F;">
         <h1 class="h4">
           Account Login
         </h1>
@@ -12,14 +12,15 @@
        
       <div class="card-body">
         <form #loginForm="ngForm">
-          <div class="form-group">
+          <div class="form-group" style="margin-top: -10px;">
             <input type="text" class="form-control" name="name" placeholder="Username" autofocus #_id="ngModel" [(ngModel)]="registerService.selectedRegister.name">
           </div>
-          <div class="form-group">
+          <div class="form-group" style="margin-top: 10px;">
             <input type="password" class="form-control" name="password" placeholder="Password" #_id="ngModel" [(ngModel)]="registerService.selectedRegister.password">
           </div>
-          <button class="btn btn-info btn-block" style="margin: 10px" (click)="getComprobacion(loginForm)">
-            Login 
+
+          <button class="btn btn-block" type="submit" style="margin: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"  (click)="getComprobacion(loginForm)" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+            Login
           </button>
         </form>
       </div>

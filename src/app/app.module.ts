@@ -11,12 +11,13 @@ import { ProductComponent } from './components/product/product.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import {FooterComponent} from './components/footer/footer.component'
 
 //Rutas
 import {app_routing} from "./app.routes";
 import { PortadaComponent } from './components/portada/portada.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,15 @@ import { MenuComponent } from './components/menu/menu.component';
     LoginComponent,
     RegisterComponent,
     PortadaComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
 	app_routing,
 	HttpClientModule,
-	FormsModule
+	FormsModule,
+ NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

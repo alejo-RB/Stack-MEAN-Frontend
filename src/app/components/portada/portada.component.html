@@ -1,63 +1,44 @@
-	
-	<div class="card mb-3">
-	  <font FACE="small fonts"><h3 class="card-header">HOBBIES TO EATS!</h3></font>
-	
-	  <img src="./assets/img/portada.jpg" 
-	  width="100%" height="400">
-	  <div class="card-body">
-	  <FONT FACE="small fonts"><b>Ventas, Distribucion y servicio al cliente los 365 dias.</b></FONT>
+<ngb-carousel style="margin-right: -67.62px; margin-left: -67.62px;">
+	<ng-template *ngFor="let imagen of imagenes" ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="imagen.img" alt="Random first slide" style="width: 100%; height: auto;"/>
+		</div>
+		<div class="carousel-caption">
+			<h1>{{imagen.description}}</h1>
+		</div>
+	</ng-template>
+</ngb-carousel>
+<div class="d-flex justify-content-between" style="margin-top: 35px;">
+	<div class="card m-2" style="width: 500px; height: 370px;">
+	  <div class="card-body text-center" >
+		<div style="margin: -17px;">
+			<img src="./assets/img/card1.jpg" class="card-img-top">
+		</div>
+		<div class="card-body" style="margin-top: 20px;">
+			<h5 class="card-title"><strong>Pide McDelivery donde estés.</strong></h5>
+			<div style="margin-top: 50px;">
+				<button class="btn my-2 my-sm-0"  style="background-color: #FFC72C; color: #27251F; text-transform: none; width: 125px; height: 40px;" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+					Pidelo acá
+				</button>
+			</div>
+			
+		</div>
 	  </div>
 	</div>
-	
+	<div class="card m-2" style="width: 500px; height: 370px;">
+	  <div class="card-body text-center" >
+		<div style="margin: -17px;">
+			<img src="./assets/img/card2.png" class="card-img-top" >
+		</div>
+		<div class="card-body" style="margin-top: 20px;">
+			<h5 class="card-title"><strong>¡McProtegidos!</strong></h5>
+			<p class="card-text">Disfruta seguro y sin contacto.</p>
+			<button class="btn my-2 my-sm-0"  style="background-color: #FFC72C; color: #27251F; text-transform: none; width: 125px; height: 40px;" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+				Conoce más
+			</button>
+		</div>
+	  </div>
+	</div>
+</div>
 
-<table class="default" >
-  <tr>
-	<td style="background-color:#717478;">
-    <br>
-		  <div class="card border-primary mb-3" style="max-width: 20rem;">
-		  <div class="card-header text-white bg-secondary"><FONT FACE="Times New Roman">EXPLOTA TUS VENTAS ON-LINE</FONT></div>
-		  <div class="card-body">
-		    <h4 class="card-title">Menu online</h4>
-		    <p class="card-text">Empieza a recibir pedidos sin complicaciones. Compartelo con tus clientes a 
-		    traves de WhatsApp, redes sociales o directamente en tu sitio web.</p>
-		  </div>
-		</div> 
-    </td>
-    <p>&nbsp;</p>
-	<td style="background-color:#717478;">
-    <br>
-		  <div class="card border-primary mb-3" style="max-width: 20rem;">
-		  <div class="card-header text-white bg-secondary"><FONT FACE="Times New Roman">COMPARTE CON TUS AMIGOS!</FONT></div>
-		  <div class="card-body">
-		    <h4 class="card-title">Orden de grupo</h4>
-		    <p class="card-text">Coordine facilmente su pedido con varias personas permitiendo que sus
-		     amigos elijan sus propios platos.</p>
-		  </div>
-		</div> 
-    </td>
-    <p>&nbsp;</p>
-    <td style="background-color:#717478;">
-    <br>
-		  <div class="card border-primary mb-3" style="max-width: 20rem;">
-		  <div class="card-header text-white bg-secondary"><FONT FACE="Times New Roman">SIN TIEMPO PARA COCINAR !?</FONT></div>
-		  <div class="card-body">
-		    <h4 class="card-title">Abastecimiento</h4>
-		    <p class="card-text">Elimine las molestias de su gran evento. Deje que nuestro 
-		    equipo de expertos cocine por usted.</p>
-		  </div>
-		</div>
-	</td> 
-	<p>&nbsp;</p>
-	<td style="background-color:#717478;">
-    <br>
-		  <div class="card border-primary mb-3" style="width: 200px" >
-		  <div class="card-header text-white bg-secondary"><FONT FACE="Times New Roman">INTEGRANTES</FONT></div>
-		  <div class="card-body">
-		    <h6>--Alejandro Rodriguez
-		    </h6>
-		    
-		  </div>
-		</div>
-	</td> 
-  </tr>	
-</table>
+  

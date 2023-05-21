@@ -18,6 +18,16 @@ export class RegisterComponent implements OnInit {
 	
   }
 
+  changeColor(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.style.backgroundColor = '#c49b28'; // Cambia el color según tus preferencias
+  }
+
+  resetColor(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    target.style.backgroundColor = '#FFC72C'; // Restablece el color original
+  }
+
   addRegister(form: NgForm) {
       this.registerService.postRegister(form.value).subscribe((res) => {
 
