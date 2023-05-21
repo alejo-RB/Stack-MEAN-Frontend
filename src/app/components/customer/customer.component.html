@@ -29,26 +29,26 @@
           <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customerService.selectedCustomer._id">
           
           	  <div class="form-group">
-	            <input type="text" name="customerId" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.customerId"
+	            <input type="text" name="customerId" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.customerId
 	              placeholder="Enter the Id Customer" class="form-control">
 	          </div>
           
 	          <div class="form-group">
-	            <input type="text" name="name" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.name"
+	            <input type="text" name="name" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.name
 	              placeholder="Enter the Name" class="form-control">
 	          </div>
 	          
 	          <div class="form-group">
-	            <input type="text" name="email" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.email"
+	            <input type="text" name="email" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.email
 	              placeholder="Enter the Email" class="form-control">
 	          </div>
 	          
 	          <div class="form-group">
-	            <input type="text" name="address" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.address"
+	            <input type="text" name="address" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.address
 	              placeholder="Enter the Address" class="form-control">
 	          </div>
 	
-	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(customerForm)">Clean</button>
+	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)=resetForm(customerForm)>Clean</button>
 	          <button class="btn btn-success">Save</button>
 	      </form>
 	    </div>
