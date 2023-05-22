@@ -1,13 +1,14 @@
-<button type="button" class="btn btn-info btn-lg" [routerLink]="['/home']" style="margin: 10px">
-	<i class="large material-icons">LOG OUT</i>
+<button type="button" class="btn btn-lg" [routerLink]="['/home']" style="margin: 10px; text-transform: none; width: 80px; height: 45px; background-color: #DA291C; color: white;" (mouseenter)="changeColorSalir($event)" (mouseleave)="resetColorSalir($event)">
+    <i class="bi bi-box-arrow-left" style="font-size: 26px;"></i>
 </button>
+
 
 <div class="row">
   <div class="col-md-3 mx-auto">
-    <div class="card border-primary mt-0 text-center">
-      <div class="card-header">
+    <div class="card mt-0 text-center"  >
+      <div class="card-header" style="background-color: #FFC72C; color: #27251F;">
         <h1 class="h4">
-          FORMULARIO DE CLIENTE
+          Formulario de cliente
         </h1>
       </div>
         <img class=" mx-auto d-block logo m-5" src="./assets/icon/cliente.png"
@@ -16,8 +17,8 @@
       <div class="card-body">
         <form>
           <div class="form-group">
-	            <button class="btn btn-outline-info" style="margin: 10px" [routerLink]="['/customer']">
-	            ACCEDER!
+	            <button class="btn" style="margin: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;" [routerLink]="['/customer']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+	            Aceder
 	          	</button>
           </div>
         </form>
@@ -26,20 +27,19 @@
   </div>
   
     <div class="col-md-3 mx-auto">
-    <div class="card border-primary mt-0 text-center">
-      <div class="card-header">
+    <div class="card mt-0 text-center">
+      <div class="card-header" style="background-color: #FFC72C; color: #27251F;">
         <h1 class="h4">
-          FORMULARIO DE PEDIDOS
+          Formulario de pedidos
         </h1>
-      </div>
+      </div >
         <img class=" mx-auto d-block logo m-5" src="./assets/icon/pedido.png"
         	 alt="Logo" width="100px" height="100px">
-       
       <div class="card-body">
         <form>
           <div class="form-group">
-	            <button class="btn btn-outline-info " style="margin: 10px" [routerLink]="['/order']">
-	            ACCEDER!
+	            <button class="btn" style="margin: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)" [routerLink]="['/order']" >
+              Acceder
 	          	</button>
           </div>
         </form>
@@ -48,10 +48,10 @@
   </div>
   
     <div class="col-md-3 mx-auto">
-    <div class="card border-primary mt-0 text-center">
-      <div class="card-header">
+    <div class="card mt-0 text-center">
+      <div class="card-header" style="background-color: #FFC72C; color: #27251F;">
         <h1 class="h4">
-          FORMULARIO DE ARTICULOS
+          Formulario de artículos
         </h1>
       </div>
         <img class=" mx-auto d-block logo m-5" src="./assets/icon/articulos.png"
@@ -60,8 +60,8 @@
       <div class="card-body">
         <form >
           <div class="form-group">
-	            <button class="btn btn-outline-info " style="margin: 10px" [routerLink]="['/item']">
-	            ACCEDER!
+	            <button class="btn" style="margin: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"  [routerLink]="['/item']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+	            Acceder
 	          	</button>
           </div>
         </form>
@@ -70,20 +70,20 @@
   </div>
   
     <div class="col-md-3 mx-auto">
-    <div class="card border-primary mt-0 text-center">
-      <div class="card-header">
+    <div class="card mt-0 text-center">
+      <div class="card-header" style="background-color: #FFC72C; color: #27251F;">
         <h1 class="h4">
-          FORMULARIO DE PRODUCTOS
+          Formulario de productos
         </h1>
       </div>
         <img class="mx-auto d-block logo m-5" src="./assets/icon/productos.png"
         	 alt="Logo" width="100px" height="100px">
        
-      <div class="card-body">
+      <div class="card-body " >
         <form >
           <div class="form-group">
-	            <button class="btn btn-outline-info "  style="margin: 10px" [routerLink]="['/product']">
-	            ACCEDER!
+	            <button class="btn" style="margin: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"  [routerLink]="['/product']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+              Acceder
 	          	</button>
           </div>
         </form>

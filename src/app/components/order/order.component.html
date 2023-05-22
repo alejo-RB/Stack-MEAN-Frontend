@@ -1,13 +1,17 @@
 <!-- ENCABEZADO -->
 
 <div class="card mb-3">
-	<div class="text-center">
-	  <h3 class="card-header d-flex align-items-center justify-content-center">
-		<button type="button" class="btn btn-info btn-lg float-left" [routerLink]="['/menu']">
-		  <i class="large material-icons">arrow_back</i>
-		</button>
-		FORMULARIO DE PEDIDOS
-	  </h3>
+	<div class="row">
+		<div class="col-sm-4 justify-content-center d-flex align-items-center">
+			<button type="button" class="btn  btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
+				<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
+			</button>
+		</div>
+		<div class="col-sm-8">
+			<h3 class="card-header d-flex align-items-center">
+				FORMULARIO DE PEDIDOS
+			  </h3>
+		</div>
 	</div>
 	<img src="./assets/img/pedidos.jpg"  border="1" width="-10%" height="300">
   </div>
@@ -24,7 +28,9 @@
         
         <!-- ENCABEZADO DE TARJETA-->
         <div class="card border-dark mb-3" style="max-width: 70rem;">
-        <div class="card-header bg-primary btn-primary"><FONT FACE="impact" ><h3 align="center">REGISTRO DE DATOS</h3></FONT></div>
+			<div class="card-header text-cente" align="center" style="background-color: #FFC72C;">
+				Registro de datos
+			</div>
 		</div>
         
 		<!-- THE Id's Employee -->
