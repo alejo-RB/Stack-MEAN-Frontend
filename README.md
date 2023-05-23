@@ -22,6 +22,17 @@ The project "Order and Customer Management System" is a web application develope
 2. **Express:** Backend framework used to create the REST API.
 3. **Angular:** Frontend framework used to create the user interface.
 4. **Node.js:** JavaScript runtime environment used to run the backend.
+5. **JavaScript:** Programming language used for client and server-side logic.
+6. **HTML:** Markup language used to structure and present web content.
+7. **Bootstrap:** CSS framework used to quickly and efficiently design and style the user interface.
+
+These technologies together form the MEAN stack (MongoDB, Express, Angular, Node.js), which provides a solid set of tools for the development of modern and scalable web applications.
+
+The use of these technologies in the project allows taking advantage of a flexible and scalable database such as MongoDB, the ease of API development with Express, the creation of interactive and responsive user interfaces with Angular, and efficient backend execution with Node.js. In addition, JavaScript, HTML and Bootstrap are fundamental to the implementation of the logic, structure and design of the web application.
+
+By combining these technologies, you get a complete and powerful development environment to create a CRUD (Create, Read, Update, Delete) application with user registration and login functionalities, multi-table data consumption and an attractive design based on the McDonald's Ecuador website.
+
+The use of these technologies demonstrates your mastery of a modern technological stack in demand in the industry, which can be a strong point for your professional profile and increase your chances of being hired.
 ## Installation and Usage Instructions📑
 
 1. Clone the repository from [GitHubLink🔗](https://github.com/alejo-RB/react-tasks-application).
@@ -32,6 +43,12 @@ The project "Order and Customer Management System" is a web application develope
 6. Navigate through a web browser to "http://localhost:4200/" to access the application.
 
 Note: Make sure you have Node.js, MongoDB and Angular CLI installed on your system before running the project.
+## See live example👨🏽‍💻🔗
+
+You can see a live example of this project by visiting the following link:
+<a href="https://alejo-rb.github.io/stack-mean-frontend/" target="blank"><img align="center" src="https://img.icons8.com/color/48/internet--v1.png" alt="https://alejo-rb.github.io/stack-mean-frontend/" height="40" width="40" /></a> 👈🏽
+## Demo Video
+A demo video has been created presenting the operation and main features of the project. You can access the video at the following link <a href="" target="blank"><img align="center" src="https://img.icons8.com/matisse/100/youtube.png" alt="" height="40" width="40" /></a>👈🏽
 ## Author✒️
 **Alejandro Rodriguez**
 <p align="left">
@@ -39,11 +56,6 @@ Note: Make sure you have Node.js, MongoDB and Angular CLI installed on your syst
 <a href="https://www.linkedin.com/in/alejandro-rb/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/alejandro-rb/" height="30" width="40" /></a> 
 </p>
 
-
-## See live example👨🏽‍💻🔗
-
-You can see a live example of this project by visiting the following link:
-<a href="https://alejo-rb.github.io/stack-mean-frontend/" target="blank"><img align="center" src="https://img.icons8.com/color/48/internet--v1.png" alt="https://alejo-rb.github.io/stack-mean-frontend/" height="40" width="40" /></a> 👈🏽
 
 ## Contracting🧾
 If you want to hire me you can write to me at arodriguez.working@gmail.com 📧 for inquiries.
