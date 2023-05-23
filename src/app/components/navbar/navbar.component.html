@@ -20,8 +20,9 @@
             ></a>
         </li>
         <li>
-          <a href="/menu" class="text-decoration-none" style="color: #271f1f"
+          <a class="text-decoration-none" style="color: #271f1f" [routerLink]="['/menu']"
             ><span
+            
               (mouseenter)="changeColorText($event)"
               (mouseleave)="resetColorText($event)"
               >Menú</span
