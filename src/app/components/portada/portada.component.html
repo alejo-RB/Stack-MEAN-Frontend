@@ -1,7 +1,7 @@
-<ngb-carousel style="width: 100vw;">
-	<ng-template *ngFor="let imagen of imagenes" ngbSlide>
+<ngb-carousel >
+	<ng-template style="width: 100vw;" *ngFor="let imagen of imagenes" ngbSlide>
 		<div class="picsum-img-wrapper">
-			<img [src]="imagen.img" alt="Random first slide" style="width: 100%; height: auto;"/>
+			<img [src]="imagen.img" alt="Random first slide" style="width: 100vw; height: auto;"/>
 		</div>
 		<div class="carousel-caption">
 			<h1>{{imagen.description}}</h1>
@@ -9,7 +9,7 @@
 	</ng-template>
 </ngb-carousel>
 <div class="d-flex justify-content-between container" style="margin-top: 35px;">
-	<div class="card m-2 rounded shadow" style="width: 515px; height: 400px;">
+	<div class="card m-2 shadow" style="width: 515px; height: 400px;">
 	  <div class="card-body text-center" >
 		<div style="margin: -17px;">
 			<img src="./assets/img/card1.jpg" class="card-img-top">
