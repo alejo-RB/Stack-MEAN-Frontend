@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './components/customer/customer.component';
@@ -35,6 +38,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    NgbDropdownModule,
 	app_routing,
 	HttpClientModule,
 	FormsModule,

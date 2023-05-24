@@ -1,8 +1,9 @@
 <body style="background-color: white">
 
-  <div *ngIf="(router.url == '/home' || router.url === '/register' || router.url === '/login')" style="margin-bottom: 110px;">
-    <app-navbar></app-navbar>
-  </div>
+  <div *ngIf="(router.url == '/home' || router.url === '/register' || router.url === '/login')"
+  [ngStyle]="{'margin-bottom': isScreenSmall ? '66px' : '110px'}">
+  <app-navbar></app-navbar>
+</div>
   
   <div class="main-container justify-content-center">
     <router-outlet></router-outlet>
@@ -13,3 +14,11 @@
   </div>
   
 </body>
+
+<style>
+  @media (max-width: 992px) {
+    .navbar {
+      margin-bottom: none;
+    }
+  }
+</style>

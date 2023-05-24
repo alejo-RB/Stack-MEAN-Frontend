@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: white; width: 100vw; height: 110px; ">
+  <div class="container-fluid" style="width: 1100px;">
+
+      <a class="navbar-brand">
+      <img 
+        src="./assets/icon/icon.png" 
+        class= "card-img-top" width="120px" height="90px">
+        </a>
+        
+        <a class="navbar-brand" style="color: #271f1f">McDonald's</a>
+  
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li style="margin-right: 20px; margin-left: 15px">
+            <a href="#" class="text-decoration-none" style="color: #271f1f"
+              ><span
+                (mouseenter)="changeColorText($event)"
+                (mouseleave)="resetColorText($event)"
+                >Home</span
+              ></a>
+          </li>
+          <li>
+            <a class="text-decoration-none" style="color: #271f1f" [routerLink]="['/menu']"
+              ><span
+              
+                (mouseenter)="changeColorText($event)"
+                (mouseleave)="resetColorText($event)"
+                >Menú</span
+              ></a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn my-2 my-sm-0 " type="submit" style="margin-right: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;" [routerLink]="['/login']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+            Login
+          </button>
+          
+          <button class="btn my-2 my-sm-0" type="submit" style="margin-left: 10px;  background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;" [routerLink]="['/register']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+            Register
+          </button>
+          
+        </form>
+      </div>
+    </div>
+
+  
+</nav>
+
