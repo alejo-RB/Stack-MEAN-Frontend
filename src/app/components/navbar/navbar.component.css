@@ -2,3 +2,10 @@ button.btn:hover {
     background-color: #FFA500; /* Cambia el color a tu preferencia */
     color: #FFF; /* Cambia el color a tu preferencia */
 }
+
+@media (max-width: 992px) {
+    .logo {
+      width: 50px;
+      height: 40px;
+    }
+  }

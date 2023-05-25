@@ -15,4 +15,6 @@ export class FooterComponent {
     const target = event.target as HTMLElement;
     target.style.color = '#6c757d'; // Restablece el color original
   }
+
+  
 }

@@ -19,3 +19,11 @@
 .custom-shape-divider-bottom-1684562730 .shape-fill {
     fill: #FFC72C;
 }
+
+@media (max-width: 992px) {
+    .redes-sociales {
+      display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

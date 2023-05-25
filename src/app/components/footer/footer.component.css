@@ -3,3 +3,48 @@ ul li a span:hover {
     color: #353430; /* Cambia el color según tus preferencias */
   }
   
+  @media (max-width: 992px) {
+    .logo {
+      width: 1000vh;
+    }
+  }
+
+  .custom-footer-ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .custom-footer-ul li {
+    white-space: nowrap;
+    margin-right: 30px;
+  }
+  
+  .footer-logo {
+    height: 36px;
+    width: 40px;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .small {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 767px) {
+    .custom-footer-ul li {
+      margin-bottom: -5px;
+      margin-right: 10px;
+    }
+  
+    .footer-logo {
+      height: 24px;
+      width: 26px;
+    }
+  
+    .small {
+      font-size: 12px;
+    }
+  }
+  
+  

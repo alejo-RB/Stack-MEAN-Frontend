@@ -4,7 +4,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-portada',
   templateUrl: './portada.component.html',
-  styles: [],
+  styleUrls: ['./portada.component.css']
 })
 export class PortadaComponent implements OnInit {
   imagenes: any[] = [{ name: 'sanduche', img: './assets/img/carrusel1.jpg' }, {    name: "hamburguesa", img: "./assets/img/carrusel2.png"}, { name: "vendedora", img: "./assets/img/carrusel3.jpg", description: "Nos cuidamos entre todos"}];

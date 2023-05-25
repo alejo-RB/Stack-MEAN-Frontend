@@ -4,8 +4,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styles: [
-  ]
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   changeColor(event: MouseEvent) {
@@ -26,5 +25,11 @@ export class NavbarComponent {
   resetColorText(event: MouseEvent) {
     const target = event.target as HTMLElement;
     target.style.color = '#27251f'; // Restablece el color original
+  }
+
+  collapseNavbar(navbarCollapse: HTMLElement, navbarToggler: HTMLButtonElement) {
+    if (navbarCollapse.classList.contains('show')) {
+      navbarToggler.click(); // Simula hacer clic en el botón para contraer el menú
+    }
   }
 }

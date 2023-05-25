@@ -1,51 +1,44 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: white; width: 100vw; ">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: white; width: 100vw;">
   <div class="container-fluid" style="width: 1100px;">
-    <a class="navbar-brand" style="display: flex; align-items: center;">
+    <a href="#" class="navbar-brand" style="display: flex; align-items: center;">
       <img src="./assets/icon/icon.png" class="card-img-top logo" width="120px" height="90px">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button #navbarToggler class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav" style="background-color: rgba(255, 255, 255, 0.662);">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link" style="color: #271f1f" (mouseenter)="changeColorText($event)"
-            (mouseleave)="resetColorText($event)">
-            <span>Home</span>
-          </a>
+    <div class="collapse navbar-collapse" #navbarCollapse id="navbarNav" style="background-color: rgba(255, 255, 255, 0.662);">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" style="margin-right: 20px; margin-left: 15px">
+          <a href="#" class="text-decoration-none" style="color: #271f1f" (click)="collapseNavbar(navbarCollapse, navbarToggler)"
+              ><span
+                (mouseenter)="changeColorText($event)"
+                (mouseleave)="resetColorText($event)"
+                >Home</span
+              ></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: #271f1f" [routerLink]="['/menu']" (mouseenter)="changeColorText($event)"
-            (mouseleave)="resetColorText($event)">
-            <span>Menú</span>
-          </a>
+        <li class="nav-item" style="margin-left: 15px">
+          <a class="text-decoration-none" style="color: #271f1f" [routerLink]="['/menu']" (click)="collapseNavbar(navbarCollapse, navbarToggler)"
+              ><span
+              
+                (mouseenter)="changeColorText($event)"
+                (mouseleave)="resetColorText($event)"
+                >Menú</span
+              ></a>
         </li>
       </ul>
-      <form class="d-flex ml-auto">
+      <form class="d-flex">
         <button class="btn my-2 my-sm-0" type="submit"
           style="margin-right: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"
-          [routerLink]="['/login']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+          [routerLink]="['/login']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)" (click)="collapseNavbar(navbarCollapse, navbarToggler)">
           Login
         </button>
         <button class="btn my-2 my-sm-0" type="submit"
           style="margin-left: 10px; background-color: #FFC72C; color: #27251F; text-transform: none; width: 80px; height: 40px;"
-          [routerLink]="['/register']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)">
+          [routerLink]="['/register']" (mouseenter)="changeColor($event)" (mouseleave)="resetColor($event)" (click)="collapseNavbar(navbarCollapse, navbarToggler)">
           Register
         </button>
       </form>
     </div>
   </div>
 </nav>
-
-<style>
-  @media (max-width: 992px) {
-    .logo {
-      width: 50px;
-      height: 40px;
-    }
-    .navbar {
-      height: none;
-    }
-  }
-</style>
