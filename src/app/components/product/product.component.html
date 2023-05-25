@@ -1,98 +1,97 @@
 <div class="container">
-<!-- ENCABEZADO -->
-<div class="card mb-3">
-	<div class="row">
+	<!-- ENCABEZADO -->
+	<div class="card mb-3">
+	  <div class="row">
 		<div class="col-sm-4 justify-content-center d-flex align-items-center">
-			<button type="button" class="btn  btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
-				<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
-			</button>
+		  <button type="button" class="btn btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
+			<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
+		  </button>
 		</div>
 		<div class="col-sm-8">
-			<h3 class="card-header d-flex align-items-center">
-				FORMULARIO DE PRODUCTOS
-			  </h3>
+		  <h3 class="card-header d-flex align-items-center">
+			FORMULARIO DE PRODUCTOS
+		  </h3>
 		</div>
+	  </div>
+	  <img src="./assets/img/producto.avif" border="1" width="-10%" height="300">
 	</div>
-	<img src="./assets/img/producto.avif" border="1" width="-10%" height="300">
-  </div>
-
-<!-- CUERPO -->
-<div class="row">
-	<!-- FORM -->
-  <div class="col-md-4">
-    <div class="card border-dark ">
-      <div class="card-body p-4" >
-
-        <!-- FORM -->
-        <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
-        
-        <!-- ENCABEZADO DE TARJETA-->
-        <div class="card border-dark mb-3" style="max-width: 70rem;">
-			<div class="card-header text-cente" align="center" style="background-color: #FFC72C;">
-				Registro de datos
-			</div>
+  
+	<!-- CUERPO -->
+	<div class="row">
+	  <!-- FORM -->
+	  <div class="col-md-4">
+		<div class="card border-dark">
+		  <div class="card-body p-4">
+  
+			<!-- FORM -->
+			<form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+  
+			  <!-- ENCABEZADO DE TARJETA-->
+			  <div class="card border-dark mb-3" style="max-width: 70rem;">
+				<div class="card-header text-center" style="background-color: #FFC72C;">
+				  Registro de datos
+				</div>
+			  </div>
+  
+			  <!-- THE Id's Employee -->
+			  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productService.selectedProduct._id">
+  
+			  <div class="form-group">
+				<input type="text" name="productId" #productId="ngModel" [(ngModel)]="productService.selectedProduct.productId" placeholder="Enter the Id Product" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="productoDescripcion" #productoDescripcion="ngModel" [(ngModel)]="productService.selectedProduct.productoDescripcion" placeholder="Enter the Product Description" class="form-control">
+			  </div>
+  
+			  <div class="input-group mb-3">
+				<span class="input-group-text">$</span>
+				<input type="number" name="price" #price="ngModel" [(ngModel)]="productService.selectedProduct.price" placeholder="Enter the Price" class="form-control">
+				<span class="input-group-text">.00</span>
+			  </div>
+  
+			  <div class="d-flex justify-content-between">
+				<button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(productForm)">Clean</button>
+				<button class="btn btn-success">Save</button>
+			  </div>
+			</form>
+		  </div>
 		</div>
-        
-		<!-- THE Id's Employee -->
-          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productService.selectedProduct._id">
-          
-          	  <div class="form-group">
-	            <input type="text" name="productId" #_id="ngModel" [(ngModel)]="productService.selectedProduct.productId"
-	              placeholder="Enter the Id Product" class="form-control">
-	          </div>
-          
-	          <div class="form-group">
-	            <input type="text" name="productoDescripcion" #_id="ngModel" [(ngModel)]="productService.selectedProduct.productoDescripcion"
-	              placeholder="Enter the Product Descripcion" class="form-control">
-	          </div>
-	
-	          <div class="input-group mb-3">
-	          <span class="input-group-text">$</span>
-	            <input type="number" name="price" #_id="ngModel" [(ngModel)]="productService.selectedProduct.price"
-	              placeholder="Enter the Price" class="form-control">
-	              <span class="input-group-text">.00</span>
-	          </div>
-	       	
-	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(productForm)">Clean</button>
-	          <button class="btn btn-success">Save</button>
-	      </form>
-	    </div>
-  </div>
-</div>
-
-
-<!-- TABLE -->
-	<div class="col-md-8 card border-dark mb-3 " >
-	<span class="navbar-toggler-icon collapsed"></span>
-		<table class="table table-hover">
-			  <thead>
-			    <tr >
-					<th scope="col">Id Product</th>
-					<th scope="col">Product Description</th>
-					<th scope="col">Price</th>
-					<th scope="col">Options</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr class="table-primary" *ngFor="let product of productService.products" >
-			      <th scope="row">{{product.productId}}</th>
-			      <td>{{product.productoDescripcion}}</td>
-			      <td>{{product.price}}</td>
-			      <td>
-					<button  class="btn btn-secondary btn-sm" (click)="editProduct(product)">
-						<i class="material-icons">edit</i>
+	  </div>
+  
+	  <!-- TABLE -->
+	  <div class="col-md-8 card border-dark mb-3">
+		<span class="navbar-toggler-icon collapsed"></span>
+		<div class="table-responsive">
+		  <table class="table table-hover">
+			<thead>
+			  <tr>
+				<th scope="col">Id Product</th>
+				<th scope="col">Product Description</th>
+				<th scope="col">Price</th>
+				<th scope="col">Options</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr class="table-primary" *ngFor="let product of productService.products">
+				<th scope="row">{{product.productId}}</th>
+				<td>{{product.productoDescripcion}}</td>
+				<td>{{product.price}}</td>
+				<td>
+				  <div class="d-flex">
+					<button class="btn btn-secondary btn-sm mr-2" (click)="editProduct(product)">
+					  <i class="material-icons">edit</i>
 					</button>
 					<button class="btn btn-danger btn-sm" (click)="deleteProduct(product._id!, productForm)">
-						<i class="material-icons">delete</i>
+					  <i class="material-icons">delete</i>
 					</button>
-				 </td>
-			    </tr>
-			  </tbody>
-		</table>
+				  </div>
+				</td>
+			  </tr>
+			</tbody>
+		  </table>
+		</div>
+	  </div>
 	</div>
-</div>
-</div>
-
-
-
-
+  </div>
+  

@@ -1,99 +1,98 @@
 <div class="container">
-<!-- ENCABEZADO -->
-<div class="card mb-3">
-	<div class="row">
+	<!-- ENCABEZADO -->
+	<div class="card mb-3">
+	  <div class="row">
 		<div class="col-sm-4 justify-content-center d-flex align-items-center">
-			<button type="button" class="btn  btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
-				<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
-			</button>
+		  <button type="button" class="btn btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
+			<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
+		  </button>
 		</div>
 		<div class="col-sm-8">
-			<h3 class="card-header d-flex align-items-center">
-				FORMULARIO DE CLIENTE
-			  </h3>
+		  <h3 class="card-header d-flex align-items-center">
+			FORMULARIO DE CLIENTE
+		  </h3>
 		</div>
+	  </div>
+	  <img src="./assets/img/cliente.jpg" border="1" width="-10%" height="300">
 	</div>
-	<img src="./assets/img/cliente.jpg" border="1" width="-10%" height="300">
-  </div>
-
-<!-- CUERPO -->
-<div class="row">
-	<!-- FORM -->
-  <div class="col-md-4">
-    <div class="card border-dark ">
-      <div class="card-body p-4">
-
-        <!-- FORM -->
-        <form #customerForm="ngForm" (ngSubmit)="addCustomer(customerForm)">
-        
-        <!-- ENCABEZADO DE TARJETA-->
-        <div class="card border-dark mb-3" style="max-width: 70rem;">
-        <div class="card-header text-cente" align="center" style="background-color: #FFC72C;">
-			Registro de datos
+  
+	<!-- CUERPO -->
+	<div class="row">
+	  <!-- FORM -->
+	  <div class="col-md-4">
+		<div class="card border-dark ">
+		  <div class="card-body p-4">
+  
+			<!-- FORM -->
+			<form #customerForm="ngForm" (ngSubmit)="addCustomer(customerForm)">
+  
+			  <!-- ENCABEZADO DE TARJETA-->
+			  <div class="card border-dark mb-3" style="max-width: 70rem;">
+				<div class="card-header text-center" style="background-color: #FFC72C;">
+				  Registro de datos
+				</div>
+			  </div>
+			  <!-- THE Id's Employee -->
+			  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customerService.selectedCustomer._id">
+  
+			  <div class="form-group">
+				<input type="text" name="customerId" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.customerId" placeholder="Enter the Id Customer" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="name" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.name" placeholder="Enter the Name" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="email" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.email" placeholder="Enter the Email" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="address" #name="ngModel" [(ngModel)]="customerService.selectedCustomer.address" placeholder="Enter the Address" class="form-control">
+			  </div>
+  
+			  <div class="d-flex justify-content-between">
+				<button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(customerForm)">Clean</button>
+				<button class="btn btn-success">Save</button>
+			  </div>
+			</form>
+		  </div>
 		</div>
-		</div>
-		<!-- THE Id's Employee -->
-          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customerService.selectedCustomer._id">
-          
-          	  <div class="form-group">
-	            <input type="text" name="customerId" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.customerId
-	              placeholder="Enter the Id Customer" class="form-control">
-	          </div>
-          
-	          <div class="form-group">
-	            <input type="text" name="name" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.name
-	              placeholder="Enter the Name" class="form-control">
-	          </div>
-	          
-	          <div class="form-group">
-	            <input type="text" name="email" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.email
-	              placeholder="Enter the Email" class="form-control">
-	          </div>
-	          
-	          <div class="form-group">
-	            <input type="text" name="address" #name="ngModel" [(ngModel)]=customerService.selectedCustomer.address
-	              placeholder="Enter the Address" class="form-control">
-	          </div>
-	
-	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)=resetForm(customerForm)>Clean</button>
-	          <button class="btn btn-success">Save</button>
-	      </form>
-	    </div>
-  </div>
-</div>
-
-<!-- TABLE -->
-	<div class="col-md-8 card border-dark mb-3">
-	<span class="navbar-toggler-icon collapsed"></span>
-		<table class="table table-hover">
+	  </div>
+  
+	  <!-- TABLE -->
+	  <div class="col-md-8 card border-dark mb-3">
+		<span class="navbar-toggler-icon collapsed"></span>
+		<div class="table-responsive">
+		  <table class="table table-hover">
 			<thead>
-				<tr>
-					<th scope="col">Id Customer</th>
-					<th scope="col">Name</th>
-					<th scope="col">Email</th>
-					<th scope="col">Address</th>
-					<th scope="col">Options</th>
-				</tr>
+			  <tr>
+				<th scope="col">Id Customer</th>
+				<th scope="col">Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Address</th>
+				<th scope="col">Options</th>
+			  </tr>
 			</thead>
 			<tbody>
-				<tr class="table-primary" *ngFor="let customer of customerService.customers">
-					<th scope="row">{{customer.customerId}}</th>
-				    <td>{{customer.name}}</td>
-				    <td>{{customer.email}}</td>
-				    <td>{{customer.address}}</td>
-				    <td>
-			          <button  class="btn btn-secondary btn-sm" (click)="editCustomer(customer)">
-			            <i class="material-icons">edit</i>
-			          </button>
-			          <button class="btn btn-danger btn-sm" (click)="deleteCustomer(customer._id!, customerForm)">
-			            <i class="material-icons">delete</i>
-			          </button>
-				    </td>
-				    
-				</tr>
+			  <tr class="table-primary" *ngFor="let customer of customerService.customers">
+				<th scope="row">{{customer.customerId}}</th>
+				<td>{{customer.name}}</td>
+				<td>{{customer.email}}</td>
+				<td>{{customer.address}}</td>
+				<td>
+				  <button class="btn btn-secondary btn-sm" (click)="editCustomer(customer)">
+					<i class="material-icons">edit</i>
+				  </button>
+				  <button class="btn btn-danger btn-sm" (click)="deleteCustomer(customer._id!, customerForm)">
+					<i class="material-icons">delete</i>
+				  </button>
+				</td>
+			  </tr>
 			</tbody>
-		</table>
+		  </table>
+		</div>
+	  </div>
 	</div>
-</div>
-
-</div>
+  </div>
+  

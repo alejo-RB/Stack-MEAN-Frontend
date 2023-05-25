@@ -1,96 +1,99 @@
 <div class="container">
-<!-- ENCABEZADO -->
-<div class="card mb-3">
-	<div class="row">
+	<!-- ENCABEZADO -->
+	<div class="card mb-3">
+	  <div class="row">
 		<div class="col-sm-4 justify-content-center d-flex align-items-center">
-			<button type="button" class="btn  btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
-				<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
-			</button>
+		  <button type="button" class="btn btn-lg float-left" style="background-color: #DA291C; color: white;" [routerLink]="['/menu']">
+			<i class="bi bi-caret-left-fill" style="font-size: 26px;"></i>
+		  </button>
 		</div>
 		<div class="col-sm-8">
-			<h3 class="card-header d-flex align-items-center">
-				FORMULARIO DE PEDIDOS
-			  </h3>
+		  <h3 class="card-header d-flex align-items-center">
+			FORMULARIO DE PEDIDOS
+		  </h3>
 		</div>
+	  </div>
+	  <img src="./assets/img/pedidos.jpg" border="1" width="-10%" height="300">
 	</div>
-	<img src="./assets/img/pedidos.jpg"  border="1" width="-10%" height="300">
-  </div>
-
-<!-- CUERPO -->
-<div class="row">
-	<!-- FORM -->
-  <div class="col-md-4">
-    <div class="card border-dark ">
-      <div class="card-body p-4">
-
-        <!-- FORM -->
-        <form #orderForm="ngForm" (ngSubmit)="addOrder(orderForm)">
-        
-        <!-- ENCABEZADO DE TARJETA-->
-        <div class="card border-dark mb-3" style="max-width: 70rem;">
-			<div class="card-header text-cente" align="center" style="background-color: #FFC72C;">
-				Registro de datos
-			</div>
+  
+	<!-- CUERPO -->
+	<div class="row">
+	  <!-- FORM -->
+	  <div class="col-md-4">
+		<div class="card border-dark ">
+		  <div class="card-body p-4">
+  
+			<!-- FORM -->
+			<form #orderForm="ngForm" (ngSubmit)="addOrder(orderForm)">
+  
+			  <!-- ENCABEZADO DE TARJETA-->
+			  <div class="card border-dark mb-3" style="max-width: 70rem;">
+				<div class="card-header text-center" style="background-color: #FFC72C;">
+				  Registro de datos
+				</div>
+			  </div>
+  
+			  <!-- THE Id's Employee -->
+			  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="orderService.selectedOrder._id">
+  
+			  <div class="form-group">
+				<input type="text" name="customerId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.customerId" placeholder="Enter the Id Customer" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="orderId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderId" placeholder="Enter the Id Order" class="form-control">
+			  </div>
+  
+			  <div class="form-group">
+				<input type="text" name="orderStatus" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderStatus" placeholder="Enter Order Status" class="form-control">
+			  </div>
+  
+			  <div class="d-flex justify-content-between">
+				<button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(orderForm)">Clean</button>
+				<button class="btn btn-success">Save</button>
+			  </div>
+			</form>
+		  </div>
 		</div>
-        
-		<!-- THE Id's Employee -->
-          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="orderService.selectedOrder._id">
-          
-          	  <div class="form-group">
-	            <input type="text" name="customerId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.customerId"
-	              placeholder="Enter the Id Customer" class="form-control">
-	          </div>
-          
-	          <div class="form-group">
-	            <input type="text" name="orderId" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderId"
-	              placeholder="Enter the Id Order" class="form-control">
-	          </div>
-	
-	          <div class="form-group">
-	            <input type="text" name="orderStatus" #name="ngModel" [(ngModel)]="orderService.selectedOrder.orderStatus"
-	              placeholder="Enter Order Status" class="form-control">
-	          </div>
-	          <button class="btn btn-primary mr-2" style="margin: 10px" (click)="resetForm(orderForm)">Clean</button>
-	          <button class="btn btn-success">Save</button>
-	      </form>
-	    </div>
-  </div>
-</div>
-
-<!-- TABLE -->
-	<div class="col-md-8 card border-dark mb-3">
-	<span class="navbar-toggler-icon collapsed"></span>
-		<table class="table table-hover">
+	  </div>
+  
+	  <!-- TABLE -->
+	  <div class="col-md-8 card border-dark mb-3">
+		<span class="navbar-toggler-icon collapsed"></span>
+		<div class="table-responsive">
+		  <table class="table table-hover">
 			<thead>
-				<tr>
-					<th scope="col">Id Customer</th>
-					<th scope="col">Id Order</th>
-					<th scope="col">Order Status</th>
-					<th scope="col">Created At</th>
-					<th scope="col">Updated At</th>
-					<th scope="col">Options</th>
-				</tr>
+			  <tr>
+				<th scope="col">Id Customer</th>
+				<th scope="col">Id Order</th>
+				<th scope="col">Order Status</th>
+				<th scope="col">Created At</th>
+				<th scope="col">Updated At</th>
+				<th scope="col">Options</th>
+			  </tr>
 			</thead>
 			<tbody>
-				<tr class="table-primary" *ngFor="let order of orderService.orders">
-					<th scope="row">{{order.customerId}}</th>
-				    <td>{{order.orderId}}</td>
-				    <td>{{order.orderStatus}}</td>
-				    <td>{{order.createdAt}}</td>
-				    <td>{{order.updatedAt}}</td>
-				    <td>
-			          <button  class="btn btn-secondary btn-sm" (click)="editOrder(order)">
-			            <i class="material-icons">edit</i>
-			          </button>
-			          <button class="btn btn-danger btn-sm" (click)="deleteOrder(order._id!, orderForm)">
-			            <i class="material-icons">delete</i>
-			          </button>
-				    </td>
-				    
-				</tr>
+			  <tr class="table-primary" *ngFor="let order of orderService.orders">
+				<th scope="row">{{order.customerId}}</th>
+				<td>{{order.orderId}}</td>
+				<td>{{order.orderStatus}}</td>
+				<td>{{order.createdAt}}</td>
+				<td>{{order.updatedAt}}</td>
+				<td>
+				  <div class="d-flex">
+					<button class="btn btn-secondary btn-sm mr-2" (click)="editOrder(order)">
+					  <i class="material-icons">edit</i>
+					</button>
+					<button class="btn btn-danger btn-sm" (click)="deleteOrder(order._id!, orderForm)">
+					  <i class="material-icons">delete</i>
+					</button>
+				  </div>
+				</td>
+			  </tr>
 			</tbody>
-		</table>
+		  </table>
+		</div>
+	  </div>
 	</div>
-</div>
-
-</div>
+  </div>
+  
