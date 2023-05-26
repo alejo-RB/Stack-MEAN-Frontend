@@ -57,5 +57,5 @@ A demo video has been created presenting the operation and main features of the 
 </p>
 
 
-## Contracting🧾
+## Contact🧾
 If you want to hire me you can write to me at arodriguez.working@gmail.com 📧 for inquiries.
