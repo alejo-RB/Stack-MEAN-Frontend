@@ -1,3 +1,4 @@
+/*Styles Cards*/
 .custom-shape-divider-bottom-1684562730 {
     position: absolute;
     bottom: 0;
@@ -20,6 +21,7 @@
     fill: #FFC72C;
 }
 
+/*Styles Social Media*/
 @media (max-width: 992px) {
     .redes-sociales {
       display: flex;
@@ -27,3 +29,27 @@
         align-items: center;
     }
   }
+
+/*Styles Separator*/
+.separator {
+    position: relative;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    background-color: #FDB813; /* Color del helado */
+    overflow: hidden; /* Para ocultar el exceso de contenido */
+  }
+  
+  .separator::before {
+    content: "";
+    position: absolute;
+    bottom: -150px; /* Ajusta la posición vertical del chorreado */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* Ajusta la anchura del chorreado */
+    height: 300px; /* Ajusta la altura del chorreado */
+    background-color: #FDB813; /* Color del chorreado */
+    border-radius: 50%; /* Para dar forma circular al chorreado */
+    transform: rotate(45deg); /* Para rotar el chorreado */
+    z-index: 1; /* Coloca el chorreado detrás del contenido */
+  }
+  
+  
