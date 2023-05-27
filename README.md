@@ -54,7 +54,7 @@ Note: Make sure you have Node.js, MongoDB and Angular CLI installed on your syst
 You can see a live example of this project by visiting the following link:
 <a href="https://alejo-rb.github.io/stack-mean-frontend/" target="blank"><img align="center" src="https://img.icons8.com/color/48/internet--v1.png" alt="https://alejo-rb.github.io/stack-mean-frontend/" height="40" width="40" /></a> 👈🏽
 ## Demo Video
-A demo video has been created presenting the operation and main features of the project. You can access the video at the following link <a href="" target="blank"><img align="center" src="https://img.icons8.com/matisse/100/youtube.png" alt="" height="40" width="40" /></a>👈🏽
+A demo video has been created presenting the operation and main features of the project. You can access the video at the following link <a href="https://youtu.be/Gw_JKcpPj6I" target="blank"><img align="center" src="https://img.icons8.com/matisse/100/youtube.png" alt="" height="40" width="40" /></a>👈🏽
 ## Author✒️
 **Alejandro Rodriguez**
 <p align="left">
