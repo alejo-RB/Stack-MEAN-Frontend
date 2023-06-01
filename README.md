@@ -15,7 +15,13 @@ The project "Order and Customer Management System" is a web application develope
 
 5. Intuitive User Interface: The user interface design is inspired by the  [McDonald's Ecuador](https://www.mcdonalds.com.ec/) website, providing a pleasant and familiar experience to users. Attractive visual elements and an intuitive design are used to facilitate navigation and use of the application.
 
-6. Data Persistence: The system uses MongoDB as the database to store and manage customer data, orders, products and other related elements. This ensures an efficient data structure and easy scalability.
+6. Responsive Design: The web application is designed to be responsive and mobile-friendly. It adapts to different screen sizes and devices, providing an optimal user experience on smartphones and tablets. The layout and content automatically adjust to ensure readability and usability on smaller screens.
+
+7. Data Persistence: The system uses MongoDB as the database to store and manage customer data, orders, products and other related elements. This ensures an efficient data structure and easy scalability.
+
+By incorporating responsive design techniques, the web application ensures that users can access and interact with the system seamlessly on their mobile devices. Whether they are managing customers, processing orders, or updating product information, the interface will adapt to their screen size, allowing for a smooth and intuitive user experience.
+
+The combination of responsive design and the other main features of the system creates a comprehensive solution for order and customer management, providing convenience, efficiency, and scalability for businesses in various industries.
 
 ## Technologies used📱
 1. **MongoDB:** NoSQL database used to store the data.
@@ -48,7 +54,7 @@ Note: Make sure you have Node.js, MongoDB and Angular CLI installed on your syst
 You can see a live example of this project by visiting the following link:
 <a href="https://alejo-rb.github.io/stack-mean-frontend/" target="blank"><img align="center" src="https://img.icons8.com/color/48/internet--v1.png" alt="https://alejo-rb.github.io/stack-mean-frontend/" height="40" width="40" /></a> 👈🏽
 ## Demo Video
-A demo video has been created presenting the operation and main features of the project. You can access the video at the following link <a href="" target="blank"><img align="center" src="https://img.icons8.com/matisse/100/youtube.png" alt="" height="40" width="40" /></a>👈🏽
+A demo video has been created presenting the operation and main features of the project. You can access the video at the following link <a href="https://youtu.be/Gw_JKcpPj6I" target="blank"><img align="center" src="https://img.icons8.com/matisse/100/youtube.png" alt="" height="40" width="40" /></a>👈🏽
 ## Author✒️
 **Alejandro Rodriguez**
 <p align="left">
@@ -57,5 +63,5 @@ A demo video has been created presenting the operation and main features of the 
 </p>
 
 
-## Contracting🧾
+## Contact🧾
 If you want to hire me you can write to me at arodriguez.working@gmail.com 📧 for inquiries.
