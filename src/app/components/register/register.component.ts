@@ -28,12 +28,6 @@ export class RegisterComponent implements OnInit {
     target.style.backgroundColor = '#FFC72C'; // Restablece el color original
   }
 
-  addRegister(form: NgForm) {
-      this.registerService.postRegister(form.value).subscribe((res) => {
-
-      });
-  }
-
 	getName(form: NgForm){
 	var fo = form.value.name;
 	var fovalue= form.value;
